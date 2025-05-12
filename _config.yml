@@ -12,4 +12,8 @@ exclude_from_localizations: ["assets", "images"]
 markdown: kramdown
 plugins:
   - jekyll-sitemap
-  - jekyll-seo-tag 
+  - jekyll-seo-tag
+
+# GitHub Pages 设置
+github:
+  [metadata] 
