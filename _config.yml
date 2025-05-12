@@ -1,0 +1,18 @@
+title: FishWhere
+description: Your Ultimate Fishing Companion
+baseurl: "/FishWhereWebsite"
+url: "https://hungerv.github.io"
+
+# 多语言设置
+languages: ["en", "zh"]
+default_lang: "en"
+exclude_from_localizations: ["assets", "images"]
+
+# 构建设置
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# 其他设置
+permalink: /:lang/:title/ 
