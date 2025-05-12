@@ -15,4 +15,6 @@ plugins:
   - jekyll-seo-tag
 
 # 其他设置
-permalink: /:lang/:title/ 
+permalink: /:lang/:title/
+relative_links:
+  baseurl: true 
