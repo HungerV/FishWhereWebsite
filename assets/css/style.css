@@ -1,0 +1,69 @@
+:root {
+    --primary-color: #2196F3;
+    --text-color: #333;
+    --background-color: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+header {
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.language-switcher {
+    text-align: right;
+}
+
+.language-switcher a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.download-section {
+    margin: 3rem 0;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.download-button:hover {
+    background-color: #1976D2;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+    margin-top: 2rem;
+} 
