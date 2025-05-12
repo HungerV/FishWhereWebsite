@@ -12,9 +12,9 @@
         <nav>
             <div class="language-switcher">
                 {% if page.lang == "en" %}
-                    <a href="{{ page.url | replace: '/en/', '/zh/' }}">中文</a>
+                    <a href="{{ '/zh/' | relative_url }}">中文</a>
                 {% else %}
-                    <a href="{{ page.url | replace: '/zh/', '/en/' }}">English</a>
+                    <a href="{{ '/en/' | relative_url }}">English</a>
                 {% endif %}
             </div>
         </nav>
