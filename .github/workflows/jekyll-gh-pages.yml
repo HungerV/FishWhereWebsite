@@ -1,5 +1,7 @@
 name: Deploy Jekyll site to Pages
 
+# DEBUG: 强制刷新 workflow 文件
+
 on:
   push:
     branches: ["main"]
@@ -32,6 +34,7 @@ jobs:
       
       - name: Debug - List files
         run: |
+          echo "DEBUG STEP"
           echo "Listing all files:"
           ls -la
           echo "Listing assets directory:"
