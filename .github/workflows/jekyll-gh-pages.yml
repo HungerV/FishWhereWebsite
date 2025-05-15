@@ -41,7 +41,7 @@ jobs:
       
       - name: Build with Jekyll
         run: |
-          bundle exec jekyll build --baseurl "${{ steps.dpo.outputs.base_path }}"
+          bundle exec jekyll build
           echo "Listing _site directory:"
           ls -la _site/
           echo "Listing _site/assets directory:"
