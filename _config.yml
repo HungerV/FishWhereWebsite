@@ -25,4 +25,10 @@ exclude:
 # 其他设置
 permalink: /:lang/:title/
 relative_links:
-  baseurl: true 
+  baseurl: true
+
+# 静态文件处理
+include:
+  - assets
+  - assets/css
+  - assets/css/style.css 
