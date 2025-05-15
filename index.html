@@ -4,14 +4,11 @@ layout: null
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Redirecting...</title>
-    <script>
-        window.location.href = "/FishWhereWebsite/en/";
-    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0;url={{ '/en/' | relative_url }}">
+    <link rel="canonical" href="{{ '/en/' | absolute_url }}">
 </head>
 <body>
-    <p>Please wait while you're redirected to our website...</p>
-    <p>If you are not redirected automatically, <a href="/FishWhereWebsite/en/">click here</a>.</p>
+    <p>Redirecting to <a href="{{ '/en/' | relative_url }}">English version</a>...</p>
 </body>
 </html> 
