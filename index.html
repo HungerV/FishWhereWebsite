@@ -7,18 +7,21 @@ layout: null
     <meta charset="utf-8">
     <title>FishWhere</title>
     <script>
-        // 获取浏览器语言
+        // 获取浏览器语言，支持多种写法
         var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
         // 默认跳转英文
-        var target = '/FishWhereWebsite/en/';
-        if (lang.startsWith('zh')) {
-            target = '/FishWhereWebsite/zh/';
+        var base = location.pathname.replace(/\/index\.html$/, '');
+        var target = base + 'en/';
+        if (lang.indexOf('zh') === 0) {
+            target = base + 'zh/';
         }
-        // 跳转
-        window.location.replace(target);
+        // 避免死循环跳转
+        if (!location.pathname.endsWith('/en/') && !location.pathname.endsWith('/zh/')) {
+            window.location.replace(target);
+        }
     </script>
     <noscript>
-        <meta http-equiv="refresh" content="0;url=/FishWhereWebsite/en/">
+        <meta http-equiv="refresh" content="0;url=en/">
     </noscript>
 </head>
 <body>
