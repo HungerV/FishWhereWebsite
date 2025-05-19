@@ -10,10 +10,9 @@ layout: null
         // 获取浏览器语言，支持多种写法
         var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
         // 默认跳转英文
-        var base = location.pathname.replace(/\/index\.html$/, '');
-        var target = base + 'en/';
+        var target = '/en/';
         if (lang.indexOf('zh') === 0) {
-            target = base + 'zh/';
+            target = '/zh/';
         }
         // 避免死循环跳转
         if (!location.pathname.endsWith('/en/') && !location.pathname.endsWith('/zh/')) {
@@ -21,7 +20,7 @@ layout: null
         }
     </script>
     <noscript>
-        <meta http-equiv="refresh" content="0;url=en/">
+        <meta http-equiv="refresh" content="0;url=/en/">
     </noscript>
 </head>
 <body>

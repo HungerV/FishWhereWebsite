@@ -1,7 +1,7 @@
 title: FishWhere
 description: Your Ultimate Fishing Companion
-baseurl: "/FishWhereWebsite"
-url: "https://hungerv.github.io"
+baseurl: ""
+url: "https://fishwhere.sweetang.site"
 
 # 多语言设置
 languages: ["en", "zh"]
