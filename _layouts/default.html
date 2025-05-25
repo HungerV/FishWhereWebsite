@@ -8,14 +8,25 @@
     {% seo %}
 </head>
 <body>
-    <header>
-        <div class="language-switcher">
-            {% if page.lang == 'en' %}
-                <a href="/zh/">中文</a>
-            {% else %}
-                <a href="/en/">English</a>
-            {% endif %}
+    <header class="main-header">
+        <div class="header-inner">
+            <div class="logo">
+                <svg width="22" height="22" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="18" cy="18" rx="16" ry="10" fill="#D5FF5F" fill-opacity="0.7"/>
+                  <path d="M6 18 Q18 8, 30 18 Q18 28, 6 18 Z" fill="#D5FF5F"/>
+                  <circle cx="25" cy="17" r="2" fill="#1E1E25"/>
+                </svg>
+                <span class="logo-text">{% if page.lang == 'zh' %}渔哪儿{% else %}FishWhere{% endif %}</span>
+            </div>
+            <div class="language-switcher">
+                {% if page.lang == 'en' %}
+                    <a href="/zh/" title="切换为中文" class="lang-btn">中文</a>
+                {% else %}
+                    <a href="/en/" title="Switch to English" class="lang-btn">English</a>
+                {% endif %}
+            </div>
         </div>
+        <div class="header-divider"></div>
     </header>
 
     <main>

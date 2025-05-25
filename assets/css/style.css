@@ -112,7 +112,7 @@ main {
 
 .download-section p {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: rgba(255,255,255,0.9);
 }
 
@@ -140,7 +140,6 @@ footer {
     text-align: center;
     padding: 2rem;
     background-color: var(--background-light);
-    margin-top: 2rem;
     color: var(--text-light);
 }
 
@@ -281,5 +280,178 @@ footer {
 
     .app-preview p {
         font-size: 1rem;
+    }
+}
+
+/* 顶部分隔线 */
+.header-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, #D5FF5F 0%, #1E1E25 100%);
+    opacity: 0.15;
+    margin-top: 0.2rem;
+}
+
+/* 顶部header优化 */
+.main-header, header {
+    padding: 0.1rem 0.5rem !important;
+    background: var(--primary-color) !important;
+    color: var(--background-color) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.header-inner {
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+.logo-text {
+    color: var(--background-color) !important;
+    font-size: 1rem !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.language-switcher {
+    width: auto;
+    justify-content: flex-end !important;
+    margin-bottom: 0 !important;
+    display: flex;
+    align-items: center;
+}
+.lang-btn {
+    padding: 0.2rem 0.9rem !important;
+    font-size: 1rem !important;
+    border-radius: 20px !important;
+    background: var(--background-color) !important;
+    color: var(--primary-color) !important;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(213,255,95,0.10) !important;
+    border: none;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s, color 0.2s;
+}
+.lang-btn:hover {
+    background: var(--primary-light) !important;
+    color: var(--background-color) !important;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 16px rgba(213,255,95,0.25) !important;
+}
+
+@media (max-width: 600px) {
+    .main-header, header {
+        padding: 0.2rem 0.3rem !important;
+        background: linear-gradient(90deg, #1E1E25 80%, #D5FF5F 100%);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .header-inner {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 0.1rem !important;
+        padding: 0 0.3rem !important;
+        width: 100%;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+    }
+    .logo svg {
+        width: 18px;
+        height: 18px;
+    }
+    .logo-text {
+        font-size: 1rem !important;
+        font-weight: bold;
+        color: #D5FF5F;
+        letter-spacing: 1px;
+    }
+    .language-switcher {
+        width: auto;
+        justify-content: flex-end !important;
+        margin-bottom: 0 !important;
+    }
+    .lang-btn {
+        padding: 0.1rem 0.5rem !important;
+        font-size: 0.9rem !important;
+        border-radius: 14px !important;
+        background: #D5FF5F;
+        color: #1E1E25;
+        font-weight: bold;
+        box-shadow: 0 1px 4px rgba(213,255,95,0.10) !important;
+    }
+    main {
+        padding: 0.3rem !important;
+        margin-top: 48px !important;
+    }
+    .download-section {
+        margin: 0.5rem 0 !important;
+        background: var(--background-light) !important;
+        background-image: none !important;
+    }
+    .download-section h1 {
+        font-size: 1.4rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 0.8rem !important;
+    }
+    .download-section p {
+        font-size: 0.9rem !important;
+    }
+    .download-button {
+        padding: 0.5rem 0.9rem !important;
+        font-size: 0.9rem !important;
+        border-radius: 24px !important;
+    }
+    .features {
+        padding: 1.5rem 0.8rem !important;
+        margin: 0.8rem 0 !important;
+        background: var(--background-light) !important;
+        background-image: none !important;
+    }
+    .feature-grid {
+        gap: 0.4rem !important;
+    }
+    .feature-item {
+        min-height: 110px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        padding: 0.8rem 0.5rem !important;
+        margin-bottom: 0.3rem !important;
+        background: var(--background-light) !important;
+    }
+    .feature-item h3 {
+        font-size: 0.95rem !important;
+    }
+    .app-preview {
+        padding: 0.7rem 0.2rem !important;
+    }
+    .app-preview h2 {
+        font-size: 0.95rem !important;
+    }
+    .app-preview p {
+        font-size: 0.9rem !important;
+    }
+    footer {
+        padding: 0.5rem 0.2rem !important;
+        font-size: 0.75rem !important;
+        line-height: 1.3 !important;
+    }
+    footer h5, 
+    footer p {
+        font-size: 0.75rem !important;
+        line-height: 1.3 !important;
+    }
+    h5 {
+        font-size: 0.9rem !important;
+    }
+    /* 核心功能标题字体减小 */
+    .features h2 {
+        font-size: 1.1rem !important;
+        margin-bottom: 1rem !important;
     }
 } 
