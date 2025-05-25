@@ -23,7 +23,13 @@
     </main>
 
     <footer>
-        <p>&copy; {{ site.time | date: '%Y' }} {% if page.lang == 'zh' %}上海随糖衍易网络科技有限公司{% else %}Shanghai Suitang Yanyi Network Technology Co., Ltd.{% endif %}. {% if page.lang == 'zh' %}保留所有权利{% else %}All rights reserved{% endif %}.</p>
+        {% if page.lang == 'zh' %}
+        <div style="text-align:center">
+            <h5>&copy; {{ site.time | date: '%Y' }}  上海随糖衍易网络科技有限公司 <a href="https://beian.miit.gov.cn/" style="color:white">沪ICP备 2025115361</a></h5>
+        </div>
+        {% else %}
+        <p>&copy; {{ site.time | date: '%Y' }} Shanghai Suitang Yanyi Network Technology Co., Ltd. All rights reserved.</p>
+        {% endif %}
     </footer>
 </body>
 </html> 
