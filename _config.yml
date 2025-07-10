@@ -23,7 +23,7 @@ exclude:
   - .github
 
 # 其他设置
-permalink: /:lang/:title/
+permalink: pretty
 relative_links:
   baseurl: true
 
