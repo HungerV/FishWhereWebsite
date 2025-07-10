@@ -136,6 +136,34 @@ main {
     color: var(--background-color);
 }
 
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: transparent;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: var(--transition);
+    border: 2px solid var(--primary-color);
+}
+
+.contact-button:hover {
+    transform: translateY(-2px);
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    box-shadow: 0 4px 8px rgba(213, 255, 95, 0.3);
+}
+
 footer {
     text-align: center;
     padding: 2rem;
@@ -254,6 +282,16 @@ footer {
     }
 
     .download-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .contact-button {
         padding: 0.8rem 2rem;
         font-size: 1rem;
     }

@@ -1,0 +1,190 @@
+---
+layout: default
+title: 联系我们 - 渔哪儿
+lang: zh
+---
+
+<section class="contact-section">
+    <h1>联系我们</h1>
+    <p>有任何问题或建议，欢迎通过下方表单联系我们的客服团队。我们会尽快回复您的邮件。</p>
+    
+    <div class="contact-container">
+        <form class="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
+            <div class="form-group">
+                <label for="name">姓名 *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">邮箱地址 *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">主题 *</label>
+                <select id="subject" name="subject" required>
+                    <option value="">请选择主题</option>
+                    <option value="bug_report">bug反馈</option>
+                    <option value="feature_request">功能建议</option>
+                    <option value="technical_support">技术支持</option>
+                    <option value="general_inquiry">一般咨询</option>
+                    <option value="other">其他</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">消息内容 *</label>
+                <textarea id="message" name="message" rows="6" placeholder="请详细描述您的问题或建议..." required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" class="submit-button">发送邮件</button>
+            </div>
+        </form>
+        
+        <div class="contact-info">
+            <h3>其他联系方式</h3>
+            <div class="contact-item">
+                <strong>客服邮箱：</strong>
+                <a href="mailto:support@fishwhere.com">support@fishwhere.com</a>
+            </div>
+            <div class="contact-item">
+                <strong>工作时间：</strong>
+                <span>周一至周五 9:00-18:00</span>
+            </div>
+            <div class="contact-item">
+                <strong>回复时间：</strong>
+                <span>我们会在24小时内回复您的邮件</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.contact-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.contact-section h1 {
+    text-align: center;
+    color: #1E1E25;
+    margin-bottom: 1rem;
+}
+
+.contact-section > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.contact-form {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #1E1E25;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #D5FF5F;
+}
+
+.submit-button {
+    width: 100%;
+    background: #D5FF5F;
+    color: #1E1E25;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #c7f051;
+    transform: translateY(-2px);
+}
+
+.contact-info {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.contact-info h3 {
+    margin-bottom: 1.5rem;
+    color: #1E1E25;
+}
+
+.contact-item {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.contact-item strong {
+    color: #1E1E25;
+}
+
+.contact-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-section {
+        padding: 1rem;
+    }
+    
+    .contact-form,
+    .contact-info {
+        padding: 1.5rem;
+    }
+}
+</style> 
