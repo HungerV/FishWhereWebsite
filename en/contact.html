@@ -10,9 +10,6 @@ lang: en
     
     <div class="contact-container">
         <div class="contact-form">
-            <h3>Choose Contact Method</h3>
-            <p>Please select any of the following ways to contact us:</p>
-            
             <div class="contact-options">
                 <a href="mailto:support@sweetang.site?subject=Bug Report&body=Please describe the bug or issue you encountered in detail..." class="contact-option">
                     <h4>🐛 Bug Report</h4>
@@ -39,20 +36,7 @@ lang: en
                 <p>Or send an email directly to:</p>
                 <a href="mailto:support@sweetang.site" class="email-link">support@sweetang.site</a>
             </div>
-        </div>
-        
-        <div class="contact-info">
-            <h3>Other Contact Methods</h3>
-            <div class="contact-item">
-                <strong>Customer Service:</strong>
-                <a href="mailto:support@sweetang.site">support@sweetang.site</a>
-            </div>
-            <div class="contact-item">
-                <strong>Business Hours:</strong>
-                <span>Monday - Friday 9:00-18:00 (GMT+8)</span>
-            </div>
-
-        </div>
+                </div>
     </div>
 </section>
 
@@ -94,9 +78,8 @@ lang: en
 }
 
 .contact-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 3rem;
+    display: flex;
+    justify-content: center;
     align-items: start;
 }
 
@@ -106,18 +89,8 @@ lang: en
     border-radius: 12px;
     box-shadow: var(--shadow);
     border: 1px solid rgba(213, 255, 95, 0.1);
-}
-
-.contact-form h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.contact-form > p {
-    color: var(--text-light);
-    margin-bottom: 2rem;
-    text-align: center;
+    max-width: 800px;
+    width: 100%;
 }
 
 .contact-options {
@@ -181,56 +154,14 @@ lang: en
     color: var(--primary-light);
 }
 
-.contact-info {
-    background: var(--background-light);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    height: fit-content;
-    border: 1px solid rgba(213, 255, 95, 0.1);
-}
-
-.contact-info h3 {
-    margin-bottom: 1.5rem;
-    color: var(--primary-color);
-}
-
-.contact-item {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-}
-
-.contact-item strong {
-    color: var(--primary-color);
-}
-
-.contact-item a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-.contact-item a:hover {
-    color: var(--primary-light);
-    text-decoration: underline;
-}
-
-.contact-item span {
-    color: var(--text-light);
-}
-
 @media (max-width: 768px) {
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
     .contact-section {
         padding: 1rem;
     }
     
-    .contact-form,
-    .contact-info {
+    .contact-form {
         padding: 1.5rem;
+        max-width: none;
     }
     
     .contact-options {
