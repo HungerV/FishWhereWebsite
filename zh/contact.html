@@ -9,44 +9,43 @@ lang: zh
     <p>有任何问题或建议，欢迎通过下方表单联系我们的客服团队。我们会尽快回复您的邮件。</p>
     
     <div class="contact-container">
-        <form class="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
-            <div class="form-group">
-                <label for="name">姓名 *</label>
-                <input type="text" id="name" name="name" required>
+        <div class="contact-form">
+            <h3>选择联系方式</h3>
+            <p>请选择以下任意一种方式联系我们：</p>
+            
+            <div class="contact-options">
+                <a href="mailto:support@sweetang.site?subject=Bug反馈&body=请在此处详细描述您遇到的问题..." class="contact-option">
+                    <h4>🐛 Bug反馈</h4>
+                    <p>报告应用中的错误或异常</p>
+                </a>
+                
+                <a href="mailto:support@sweetang.site?subject=功能建议&body=请在此处描述您希望添加的新功能..." class="contact-option">
+                    <h4>💡 功能建议</h4>
+                    <p>提出新功能或改进建议</p>
+                </a>
+                
+                <a href="mailto:support@sweetang.site?subject=技术支持&body=请详细描述您需要帮助的技术问题..." class="contact-option">
+                    <h4>🛠️ 技术支持</h4>
+                    <p>获取使用应用的技术帮助</p>
+                </a>
+                
+                <a href="mailto:support@sweetang.site?subject=一般咨询&body=请在此处输入您的咨询内容..." class="contact-option">
+                    <h4>❓ 一般咨询</h4>
+                    <p>其他问题和咨询</p>
+                </a>
             </div>
             
-            <div class="form-group">
-                <label for="email">邮箱地址 *</label>
-                <input type="email" id="email" name="email" required>
+            <div class="direct-email">
+                <p>或者直接发送邮件到：</p>
+                <a href="mailto:support@sweetang.site" class="email-link">support@sweetang.site</a>
             </div>
-            
-            <div class="form-group">
-                <label for="subject">主题 *</label>
-                <select id="subject" name="subject" required>
-                    <option value="">请选择主题</option>
-                    <option value="bug_report">bug反馈</option>
-                    <option value="feature_request">功能建议</option>
-                    <option value="technical_support">技术支持</option>
-                    <option value="general_inquiry">一般咨询</option>
-                    <option value="other">其他</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="message">消息内容 *</label>
-                <textarea id="message" name="message" rows="6" placeholder="请详细描述您的问题或建议..." required></textarea>
-            </div>
-            
-            <div class="form-group">
-                <button type="submit" class="submit-button">发送邮件</button>
-            </div>
-        </form>
+        </div>
         
         <div class="contact-info">
             <h3>其他联系方式</h3>
             <div class="contact-item">
                 <strong>客服邮箱：</strong>
-                <a href="mailto:support@fishwhere.com">support@fishwhere.com</a>
+                <a href="mailto:support@sweetang.site">support@sweetang.site</a>
             </div>
             <div class="contact-item">
                 <strong>工作时间：</strong>
@@ -94,51 +93,76 @@ lang: zh
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+.contact-form h3 {
     color: #1E1E25;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 0.75rem;
+.contact-form > p {
+    color: #666;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.contact-option {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
     border: 2px solid #e1e5e9;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
+.contact-option:hover {
     border-color: #D5FF5F;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(213, 255, 95, 0.2);
 }
 
-.submit-button {
-    width: 100%;
-    background: #D5FF5F;
+.contact-option h4 {
     color: #1E1E25;
-    border: none;
-    padding: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-option p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.direct-email {
+    text-align: center;
+    padding: 1.5rem;
+    background: #fff;
     border-radius: 8px;
+    border: 2px solid #D5FF5F;
+}
+
+.direct-email p {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.email-link {
+    color: #1E1E25;
     font-size: 1.1rem;
     font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
-.submit-button:hover {
-    background: #c7f051;
-    transform: translateY(-2px);
+.email-link:hover {
+    color: #D5FF5F;
 }
 
 .contact-info {
@@ -185,6 +209,14 @@ lang: zh
     .contact-form,
     .contact-info {
         padding: 1.5rem;
+    }
+    
+    .contact-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-option {
+        padding: 1rem;
     }
 }
 </style> 

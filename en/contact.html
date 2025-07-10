@@ -9,44 +9,43 @@ lang: en
     <p>Have any questions or suggestions? Feel free to reach out to our customer service team using the form below. We'll get back to you as soon as possible.</p>
     
     <div class="contact-container">
-        <form class="contact-form" action="https://formspree.io/f/your_form_id" method="POST">
-            <div class="form-group">
-                <label for="name">Name *</label>
-                <input type="text" id="name" name="name" required>
+        <div class="contact-form">
+            <h3>Choose Contact Method</h3>
+            <p>Please select any of the following ways to contact us:</p>
+            
+            <div class="contact-options">
+                <a href="mailto:support@sweetang.site?subject=Bug Report&body=Please describe the bug or issue you encountered in detail..." class="contact-option">
+                    <h4>🐛 Bug Report</h4>
+                    <p>Report errors or issues in the app</p>
+                </a>
+                
+                <a href="mailto:support@sweetang.site?subject=Feature Request&body=Please describe the new feature you would like to see..." class="contact-option">
+                    <h4>💡 Feature Request</h4>
+                    <p>Suggest new features or improvements</p>
+                </a>
+                
+                <a href="mailto:support@sweetang.site?subject=Technical Support&body=Please describe the technical issue you need help with..." class="contact-option">
+                    <h4>🛠️ Technical Support</h4>
+                    <p>Get technical help using the app</p>
+                </a>
+                
+                <a href="mailto:support@sweetang.site?subject=General Inquiry&body=Please enter your inquiry here..." class="contact-option">
+                    <h4>❓ General Inquiry</h4>
+                    <p>Other questions and inquiries</p>
+                </a>
             </div>
             
-            <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" required>
+            <div class="direct-email">
+                <p>Or send an email directly to:</p>
+                <a href="mailto:support@sweetang.site" class="email-link">support@sweetang.site</a>
             </div>
-            
-            <div class="form-group">
-                <label for="subject">Subject *</label>
-                <select id="subject" name="subject" required>
-                    <option value="">Please select a subject</option>
-                    <option value="bug_report">Bug Report</option>
-                    <option value="feature_request">Feature Request</option>
-                    <option value="technical_support">Technical Support</option>
-                    <option value="general_inquiry">General Inquiry</option>
-                    <option value="other">Other</option>
-                </select>
-            </div>
-            
-            <div class="form-group">
-                <label for="message">Message *</label>
-                <textarea id="message" name="message" rows="6" placeholder="Please describe your question or suggestion in detail..." required></textarea>
-            </div>
-            
-            <div class="form-group">
-                <button type="submit" class="submit-button">Send Message</button>
-            </div>
-        </form>
+        </div>
         
         <div class="contact-info">
             <h3>Other Contact Methods</h3>
             <div class="contact-item">
                 <strong>Customer Service:</strong>
-                <a href="mailto:support@fishwhere.com">support@fishwhere.com</a>
+                <a href="mailto:support@sweetang.site">support@sweetang.site</a>
             </div>
             <div class="contact-item">
                 <strong>Business Hours:</strong>
@@ -94,51 +93,76 @@ lang: en
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
+.contact-form h3 {
     color: #1E1E25;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 0.75rem;
+.contact-form > p {
+    color: #666;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.contact-option {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    color: inherit;
     border: 2px solid #e1e5e9;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    outline: none;
+.contact-option:hover {
     border-color: #D5FF5F;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(213, 255, 95, 0.2);
 }
 
-.submit-button {
-    width: 100%;
-    background: #D5FF5F;
+.contact-option h4 {
     color: #1E1E25;
-    border: none;
-    padding: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-option p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.direct-email {
+    text-align: center;
+    padding: 1.5rem;
+    background: #fff;
     border-radius: 8px;
+    border: 2px solid #D5FF5F;
+}
+
+.direct-email p {
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.email-link {
+    color: #1E1E25;
     font-size: 1.1rem;
     font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
-.submit-button:hover {
-    background: #c7f051;
-    transform: translateY(-2px);
+.email-link:hover {
+    color: #D5FF5F;
 }
 
 .contact-info {
@@ -185,6 +209,14 @@ lang: en
     .contact-form,
     .contact-info {
         padding: 1.5rem;
+    }
+    
+    .contact-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-option {
+        padding: 1rem;
     }
 }
 </style> 
